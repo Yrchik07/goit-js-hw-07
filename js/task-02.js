@@ -36,8 +36,6 @@ const gal = images.map((imag) => {
 
   return `<li class = "list-item"><img class="list-img" src = "${src}" alt = "${alt}" width = "360" height = "300" ></li>`;
 });
-const list1 = list.children;
-console.log(list1)
 
 list.insertAdjacentHTML("beforeend", gal);
 list.style.listStyle = "none";
@@ -45,7 +43,7 @@ list.style.padding = "0";
 list.style.margin = "0";
 list.style.display = "flex";
 list.style.flexWrap = "wrap";
-list.style.gap = "24px 48px";
+list.style.gap = "48px 24px";
+list.style.padding = "100px 156px";
+list.style.background = "#FFF";
 
-list1.style.position = "relative";
-list1.style.flexBasis = "calc((100% - 48px) / 3)";
