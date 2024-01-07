@@ -28,8 +28,7 @@ const images = [
   },
 ];
 const list = document.querySelector("ul.gallery");
-console.log(list)
-const gal = images.map((imag) => {
+const galleryHTML = images.map((imag) => {
   const src = imag.url;
   const alt = imag.alt;
   console.log(src, alt)
@@ -37,8 +36,7 @@ const gal = images.map((imag) => {
   return `<li class = "list-item"><img class="list-img" src = "${src}" alt = "${alt}" width = "360" height = "300" ></li>`;
 });
 
-list.insertAdjacentHTML("beforeend", gal);
-list.style.listStyle = "none";
+list.insertAdjacentHTML("beforeend", galleryHTML.join(''));
 list.style.padding = "0";
 list.style.margin = "0";
 list.style.display = "flex";
