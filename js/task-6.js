@@ -8,16 +8,18 @@ input.addEventListener('blur', inputBlur);
 createButton.addEventListener('click', clickBtn);
 destroyButton.addEventListener('click', destroyBoxes);
 
+
 function clickBtn(){
-    createBoxes(numberInput)
+  if(input.value >= 1 && input.value <= 100){
+    createBoxes(input.value)
+}input.value = '';
+
   }
 
-let numberInput = '';
 function inputBlur(){
-  if(input.value >= 1 && input.value <= 100){
-    numberInput = input.value;
-  }
+  return input.value;
 }
+
 function createBoxes(amount){
   boxContainer.innerHTML = '';
   let width = 30;
@@ -43,7 +45,5 @@ function getRandomHexColor() {
 }
 
 function destroyBoxes(){
-  while(boxContainer.firstChild) {
-    boxContainer.removeChild(boxContainer.firstChild);
-  }numberInput = '';
+  boxContainer.innerHTML = '';
 }

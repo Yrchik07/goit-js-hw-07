@@ -31,17 +31,9 @@ const list = document.querySelector("ul.gallery");
 const galleryHTML = images.map((imag) => {
   const src = imag.url;
   const alt = imag.alt;
-  console.log(src, alt)
 
   return `<li class = "list-item"><img class="list-img" src = "${src}" alt = "${alt}" width = "360" height = "300" ></li>`;
 });
 
 list.insertAdjacentHTML("beforeend", galleryHTML.join(''));
-list.style.padding = "0";
-list.style.margin = "0";
-list.style.display = "flex";
-list.style.flexWrap = "wrap";
-list.style.gap = "48px 24px";
-list.style.padding = "100px 156px";
-list.style.background = "#FFF";
 
